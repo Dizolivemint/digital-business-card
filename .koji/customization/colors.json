@@ -1,8 +1,12 @@
 {
   "colors": {
     "linkColor": "#47d0fa",
-    "backgroundColor": "#395b89",
-    "textColor": "#fcfcfc"
+    "backgroundColor": "#050c16",
+    "textColor": "#fcfcfc",
+    "iconColor": "#902c2c",
+    "gradientColor01": "#18502a",
+    "gradientColor02": "#315e78",
+    "gradientColor03": "#0c0431"
   },
   "@@editor": [
     {
@@ -24,7 +28,27 @@
         },
         {
           "key": "linkColor",
-          "name": "Link Color",
+          "name": "Link color",
+          "type": "color"
+        },
+        {
+          "key": "iconColor",
+          "name": "Icon color",
+          "type": "color"
+        },
+        {
+          "key": "gradientColor01",
+          "name": "Background gradient color 1",
+          "type": "color"
+        },
+        {
+          "key": "gradientColor02",
+          "name": "Background gradient color 2",
+          "type": "color"
+        },
+        {
+          "key": "gradientColor03",
+          "name": "Background gradient color 3",
           "type": "color"
         }
       ]

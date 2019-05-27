@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "name": "Koji React Scaffold",
-    "short_name": "React App",
-    "description": "A React scaffold modified specifically for Koji. Easily customizable at gokoji.com.",
-    "image": "https://images.koji-cdn.com/025a4ca3-2c61-4cf2-b821-55b7023c47dc/kojireact.png",
-    "icon": "https://objects.koji-cdn.com/025a4ca3-2c61-4cf2-b821-55b7023c47dc/94e432a7-951b-4b41-a726-d5d9fc66c533.ico",
-    "icon192": "",
-    "icon512": "",
+    "name": "My Business Card",
+    "short_name": "Business Card",
+    "description": "Customizable and fully extendable business card app that people can add to their homescreen.\n",
+    "image": "https://images.koji-cdn.com/a141fe88-8bd0-4b4d-9379-69d9232a41e5/LogoMakr1l8CT6192.png",
+    "icon": "https://images.koji-cdn.com/a141fe88-8bd0-4b4d-9379-69d9232a41e5/LogoMakr1l8CT632.png",
+    "icon192": "https://images.koji-cdn.com/a141fe88-8bd0-4b4d-9379-69d9232a41e5/LogoMakr1l8CT6192.png",
+    "icon512": "https://images.koji-cdn.com/a141fe88-8bd0-4b4d-9379-69d9232a41e5/LogoMakr1l8CT6512.png",
     "gaCode": ""
   },
   "@@editor": [
@@ -22,9 +22,9 @@
           "description": "Will show up as title on Google and Facebook"
         },
         {
-            "key": "short_name",
-            "name": "Short Name for your App",
-            "description": "A shorter version of you App name used for PWA's"
+          "key": "short_name",
+          "name": "Short Name for your App",
+          "description": "A shorter version of you App name used for PWA's"
         },
         {
           "key": "description",

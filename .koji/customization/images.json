@@ -1,6 +1,7 @@
 {
   "images": {
-    "icon": "https://images.koji-cdn.com/ea549917-09af-4b57-894c-913b2d5577f2/kojireact.png"
+    "logo": "https://images.koji-cdn.com/ea549917-09af-4b57-894c-913b2d5577f2/kojireact.png",
+    "background": "https://images.koji-cdn.com/a141fe88-8bd0-4b4d-9379-69d9232a41e5/coolbackground.png"
   },
   "@@editor": [
     {
@@ -10,9 +11,15 @@
       "source": "images.json",
       "fields": [
         {
-          "key": "icon",
-          "name": "Icon",
-          "description": "Icon that spins on the page",
+          "key": "logo",
+          "name": "Logo",
+          "description": "Company logo",
+          "type": "image"
+        },
+        {
+          "key": "background",
+          "name": "Background",
+          "description": "Background image",
           "type": "image"
         }
       ]

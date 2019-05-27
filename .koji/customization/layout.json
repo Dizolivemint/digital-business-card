@@ -1,0 +1,66 @@
+{
+  "layout": {
+    "fontFamily": "https://fonts.googleapis.com/css?family=Pacifico",
+    "alignAddress": "left",
+    "useGradient": true,
+    "angleGradient": "15",
+    "icons": true,
+    "useBackgroundImage": false,
+    "titleLetterSpacing": "3vmin",
+    "nameLetterSpacing": ""
+  },
+  "@@editor": [
+    {
+      "key": "layout",
+      "name": "Layout",
+      "icon": "🖺",
+      "source": "layout.json",
+      "fields": [
+        {
+          "key": "fontFamily",
+          "name": "Font Family",
+          "description": "Google fonts link to font to use on page."
+        },
+        {
+          "key": "nameLetterSpacing",
+          "name": "Name letter spacing",
+          "description": "Set the number of pixels to space the letters of your name."
+        },
+        {
+          "key": "titleLetterSpacing",
+          "name": "Title letter spacing",
+          "description": "Set the number of pixels to space the letters of your title."
+        },
+        {
+          "key": "alignAddress",
+          "name": "Text alignment",
+          "description": "Address text alignment (center, left or right).",
+          "type": "text"
+        },
+        {
+          "key": "useBackgroundImage",
+          "name": "Use background image?",
+          "description": "Set to true and set the background image in the Image controls.",
+          "type": "boolean"
+        },
+        {
+          "key": "useGradient",
+          "name": "Use background gradient?",
+          "description": "Set to true and set the colors in the Color controls.",
+          "type": "boolean"
+        },
+        {
+          "key": "angleGradient",
+          "name": "Gradient angle in degrees",
+          "description": "Type in an angle for the gradient.",
+          "type": "text"
+        },
+        {
+          "key": "icons",
+          "description": "Display address field icons?",
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}

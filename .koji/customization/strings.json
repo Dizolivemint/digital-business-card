@@ -1,7 +1,15 @@
 {
   "strings": {
-    "content": "Welcome to your Koji React App",
-    "linkText": "Learn React"
+    "name": "Jane Doe",
+    "email": "noreply@domain.com",
+    "companyAddress": "3936 Texas Street",
+    "companyPhone": " (555) 555-6122",
+    "companyCity": "San Diego",
+    "companyState": "CA",
+    "companyZip": "92103",
+    "companyName": "Koji",
+    "title": "ARTIST",
+    "websiteUrl": "https://withkoji.com/"
   },
   "@@editor": [
     {
@@ -11,14 +19,55 @@
       "source": "strings.json",
       "fields": [
         {
-          "key": "content",
-          "name": "Page Content",
-          "description": "The text that is displayed on the page",
+          "key": "name",
+          "name": "Name",
+          "description": "Your name as you want it to appear.",
           "type": "text"
         },
         {
-          "key": "linkText",
-          "name": "Link Text",
+          "key": "title",
+          "name": "Job title",
+          "type": "text"
+        },
+        {
+          "key": "email",
+          "name": "Email",
+          "type": "text"
+        },
+        {
+          "key": "websiteUrl",
+          "name": "Website",
+          "description": "URL of your company website.",
+          "type": "text"
+        },
+        {
+          "key": "companyName",
+          "name": "Company name",
+          "type": "text"
+        },
+        {
+          "key": "companyAddress",
+          "name": "Company address",
+          "type": "text"
+        },
+        {
+          "key": "companyCity",
+          "name": "Company City",
+          "type": "text"
+        },
+        {
+          "key": "companyState",
+          "name": "Company State",
+          "type": "text"
+        },
+        {
+          "key": "companyZip",
+          "name": "Company Zip Code",
+          "type": "text"
+        },
+        {
+          "key": "companyPhone",
+          "name": "Phone number",
           "type": "text"
         }
       ]
