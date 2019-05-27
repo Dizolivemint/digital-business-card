@@ -11,6 +11,7 @@ const SocialLink = styled.a`
 `
 
 const Container = styled.div`
+    width: 100%;
 `
 // Add new Social links here and to .koji/customization/social.json
 const facebook = "https://facebook.com/"
