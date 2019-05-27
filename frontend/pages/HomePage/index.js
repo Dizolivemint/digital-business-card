@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
-import MaterialIcon, {colorPalette} from 'material-icons-react';
 import { FaSearchLocation, FaPhone } from 'react-icons/fa';
 import { IoIosMail } from "react-icons/io";
 
+import Social from "./components/Social";
 
 const Container = styled.div`
     background-color: ${() => Koji.config.colors.backgroundColor};
@@ -104,31 +104,28 @@ const Phone = styled(Link)``;
 
 const Email = styled(Link)``;
 
+// Provides caching so functions that return the same result aren't executed multiple times
 function memoize(func) {
-
   let cache = new Map();
-
   const memoized = function (...args) {
-
     let key = args[0];
-
     if (cache.has(key)) {
       return cache.get(key);
     }
-
     let result = func.apply(this, args);
     cache.set(key, result);
     return result;
   };
-
   return memoized;
 }
 
+// Create the Google Maps address
 function getMapUri() {
   let mapUri = `https://www.google.com/maps/place/${Koji.config.strings.companyAddress},${Koji.config.strings.companyCity},${Koji.config.strings.companyState}+${Koji.config.strings.companyZip}`
   return mapUri.replace(/ /g, "+");
 }
 
+// Create the Google Maps address once, even if called multiple times
 let memoizedUri = memoize(getMapUri);
 
 class HomePage extends React.Component {
@@ -239,6 +236,7 @@ class HomePage extends React.Component {
                         </Column>
                     </Email>
                 </Company>
+                <Social/>
             </Container>
         );
     }

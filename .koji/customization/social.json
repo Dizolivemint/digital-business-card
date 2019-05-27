@@ -1,0 +1,62 @@
+{
+  "social": {
+    "facebook": "madewithkoji",
+    "github": "GoMeta",
+    "instagram": "madewithkoji",
+    "linkedin": "milesexner",
+    "pinterest": "dizolivemint",
+    "soundcloud": "dizolivemint",
+    "youtube": "UCWH5h68MVkFC8CoLTiYNfWA",
+    "twitter": "dizolivemint"
+  },
+  "@@editor": [
+    {
+      "key": "social",
+      "name": "Social",
+      "icon": "#️⃣",
+      "source": "social.json",
+      "fields": [
+        {
+          "key": "facebook",
+          "name": "Facebook",
+          "type": "text"
+        },
+        {
+          "key": "github",
+          "name": "GitHub",
+          "type": "text"
+        },
+        {
+          "key": "instagram",
+          "name": "Instagram",
+          "type": "text"
+        },
+        {
+          "key": "linkedin",
+          "name": "LinkedIn",
+          "type": "text"
+        },
+        {
+          "key": "pinterest",
+          "name": "Pinterest",
+          "type": "text"
+        },
+        {
+          "key": "soundcloud",
+          "name": "SoundCloud",
+          "type": "text"
+        },
+        {
+          "key": "twitter",
+          "name": "Twitter",
+          "type": "text"
+        },
+        {
+          "key": "youtube",
+          "name": "YouTube",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

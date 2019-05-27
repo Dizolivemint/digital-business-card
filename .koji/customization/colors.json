@@ -6,7 +6,8 @@
     "iconColor": "#902c2c",
     "gradientColor01": "#18502a",
     "gradientColor02": "#315e78",
-    "gradientColor03": "#0c0431"
+    "gradientColor03": "#0c0431",
+    "socialColor": "#c3eae6"
   },
   "@@editor": [
     {
@@ -29,6 +30,11 @@
         {
           "key": "linkColor",
           "name": "Link color",
+          "type": "color"
+        },
+        {
+          "key": "socialColor",
+          "name": "Social color",
           "type": "color"
         },
         {
