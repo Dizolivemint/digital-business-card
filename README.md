@@ -5,7 +5,7 @@ Welcome to your digital business card!
 * Add your own domain.
 * PWA supported (i.e. Add to homescreen, push notifications, offline usage)
 
-For easy access, add digital business cards to a busniess cards folder on your homescreen.
+For easy access, add digital business cards to a business cards folder on your homescreen.
 * [Pixel directions](https://www.youtube.com/watch?v=LEiGDtbYN9s)
 
 Change out icons using the included [react-icons library](https://react-icons.netlify.com/#/icons/fa)
@@ -17,7 +17,9 @@ Change out icons using the included [react-icons library](https://react-icons.ne
 3. 3 Visual Customization Controls (VCCs) have been added to the template. These can be quickly modified to your applicaiton
     - [Colors](#~/.koji/customization/colors.json!visual) - Change the text color, background color, & link text color.
     - [Images](#~/.koji/customization/images.json!visual) - Change out the logo and background. 
-    - [Strings](#~/.koji/customization/strings.json!visual) - Change the out the company information.
+    - [Strings](#~/.koji/customization/strings.json!visual) - Change the out your information.
+    - [Layout](#~/.koji/customization/layout.json!visual) - Change background type, font options, text alignment, and icon display.
+    - [Social](#~/.koji/customization/social.json!visual) - Change or remove social media profiles.
 4. Find logos, backgrounds, and any other assets you may need at [Awesome Design Tools](https://flawlessapp.io/designtools)
 
 ## Any Questions?

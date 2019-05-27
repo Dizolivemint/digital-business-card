@@ -21,7 +21,7 @@ const Container = styled.div`
     align-items: center;
     font-size: calc(10px + 2vmin);
     color: ${() => Koji.config.colors.textColor};
-    text-align: center;
+    text-align: ${() => Koji.config.layout.alignAddress};
     justify-content: center;
     @media (max-width: 1280px) {
         flex-direction: column;
@@ -34,7 +34,7 @@ const H1Name = styled.h1`
     text-indent: ${() => Koji.config.layout.nameLetterSpacing};
     width: 100%;
     margin: auto;
-    text-align: center;
+    text-align: ${() => Koji.config.layout.alignAddress};
 `;
 
 const H2Title = styled.p`
@@ -75,9 +75,9 @@ const Logo = styled.img`
 
 const Column = styled.div`
     width: ${props => props.colWidth};
-    align-self: center;
+    align-self: ${() => Koji.config.layout.alignAddress};
     display: flex;
-    justify-content: center;
+    justify-content: ${() => Koji.config.layout.alignAddress};
 `;
 
 const Icon = styled(Column)`

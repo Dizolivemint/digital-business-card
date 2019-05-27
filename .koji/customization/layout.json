@@ -1,7 +1,7 @@
 {
   "layout": {
     "fontFamily": "https://fonts.googleapis.com/css?family=Pacifico",
-    "alignAddress": "left",
+    "alignAddress": "center",
     "useGradient": true,
     "angleGradient": "15",
     "icons": true,
