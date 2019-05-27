@@ -5,6 +5,7 @@ import { FaSearchLocation, FaPhone } from 'react-icons/fa';
 import { IoIosMail } from "react-icons/io";
 
 import Social from "./components/Social";
+import Font from './helpers/Font'
 
 const Container = styled.div`
     background-color: ${() => Koji.config.colors.backgroundColor};
@@ -19,7 +20,7 @@ const Container = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    font-size: calc(10px + 2vmin);
+    font-size: calc(10px + ${() => Koji.config.layout.defaultFontSize});
     color: ${() => Koji.config.colors.textColor};
     text-align: ${() => Koji.config.layout.alignAddress};
     justify-content: center;
@@ -28,6 +29,13 @@ const Container = styled.div`
     }
 `;
 
+const CompanyName = styled.p`
+    margin: 0;
+    font-family: '${() => Font.getFontFamily(Koji.config.layout.companyFontFamily)}', sans-serif;
+    font-size: calc(10px + ${() => Koji.config.layout.companyFontSize});
+    text-align: center;
+    
+`
 const H1Name = styled.h1`
     font-size: calc(10px + 4vmin);
     letter-spacing: ${() => Koji.config.layout.nameLetterSpacing};
@@ -41,7 +49,7 @@ const H2Title = styled.p`
     font-size: calc(10px + 1vmin);
     letter-spacing: ${() => Koji.config.layout.titleLetterSpacing};
     text-indent: ${() => Koji.config.layout.titleLetterSpacing};
-    margin-top: 0
+    margin: ${props => props.margin};
 `;
 
 const AppLogoSpin = keyframes`
@@ -65,7 +73,9 @@ const Link = styled.a`
     text-align: ${() => Koji.config.layout.alignAddress};
     flex-wrap: wrap;
     width: ${props => props.colWidth};
-    margin: 0 0 1em 0;
+    margin: 0 0 .5em 0;
+    margin: ${props => props.margin};
+    justify-content: center;
 `;
 
 const Logo = styled.img`
@@ -98,11 +108,13 @@ const Company = styled(Column)`
     }
 `;
 
-const Address = styled(Link)``;
+const Address = styled(Link)`
+    font-size: calc(10px + ${() => Koji.config.layout.addressFontSize});
+`;
 
-const Phone = styled(Link)``;
+const Phone = styled(Address)``;
 
-const Email = styled(Link)``;
+const Email = styled(Address)``;
 
 // Provides caching so functions that return the same result aren't executed multiple times
 function memoize(func) {
@@ -152,17 +164,23 @@ class HomePage extends React.Component {
         this.setState({mapUri: getMapUri()});
     }
 
+    // Control the margins and column widths with margin and colWidth
     render() {
         return (
             <Container>
                 <Link
+                margin="1em"
                 href={Koji.config.strings.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 >
 
                     <Logo src={Koji.config.images.logo} />
-                    
+                    <Title colWidth="100%">
+                        <CompanyName>
+                            {Koji.config.strings.companyName}
+                        </CompanyName>
+                    </Title>
                 </Link>              
                 <Company>
                     <Title colWidth="100%">
@@ -172,7 +190,11 @@ class HomePage extends React.Component {
                     </Title>
                     <Title colWidth="100%">
 
-                        <H2Title>{Koji.config.strings.title}</H2Title>  
+                        <H2Title
+                        margin="0 0 1.5em"
+                        >
+                            {Koji.config.strings.title}
+                        </H2Title>  
 
                     </Title>
                     <Address 

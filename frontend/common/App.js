@@ -22,18 +22,20 @@ import styled from 'styled-components';
 import Router from './Router';
 import Koji from 'koji-tools';
 
-function getFontFamily(ff) {
-    const start = ff.indexOf('family=');
-    if(start === -1) return 'sans-serif';
-    let end = ff.indexOf('&', start);
-    if(end === -1) end = undefined;
-    return ff.slice(start + 7, end);
-}
+import Font from '../pages/HomePage/helpers/Font.js'
+
+// function getFontFamily(ff) {
+//     const start = ff.indexOf('family=');
+//     if(start === -1) return 'sans-serif';
+//     let end = ff.indexOf('&', start);
+//     if(end === -1) end = undefined;
+//     return ff.slice(start + 7, end);
+// }
 
 const Container = styled.div`
     padding: 0;
     margin: 0;
-    font-family: '${() => getFontFamily(Koji.config.layout.fontFamily)}', sans-serif;
+    font-family: '${() => Font.getFontFamily(Koji.config.layout.fontFamily)}', sans-serif;
 `;
 
 class App extends React.PureComponent {

@@ -7,7 +7,11 @@
     "icons": true,
     "useBackgroundImage": false,
     "titleLetterSpacing": "3vmin",
-    "nameLetterSpacing": ""
+    "nameLetterSpacing": "",
+    "companyFontFamily": "https://fonts.googleapis.com/css?family=Dosis",
+    "companyFontSize": "1.2vmin",
+    "addressFontSize": "1.25vmin",
+    "baseFontSize": "2vmin"
   },
   "@@editor": [
     {
@@ -18,8 +22,28 @@
       "fields": [
         {
           "key": "fontFamily",
-          "name": "Font Family",
+          "name": "Font family",
           "description": "Google fonts link to font to use on page."
+        },
+        {
+          "key": "baseFontSize",
+          "name": "Font size (base)",
+          "description": "Font size increase from 10px for all elements."
+        },
+        {
+          "key": "addressFontSize",
+          "name": "Font size",
+          "description": "Font size increase from 10px for address elements."
+        },
+        {
+          "key": "companyFontFamily",
+          "name": "Font family",
+          "description": "Google fonts link to font to use for the company name."
+        },
+        {
+          "key": "companyFontSize",
+          "name": "Font size",
+          "description": "Font size increase from 10px for company name."
         },
         {
           "key": "nameLetterSpacing",
