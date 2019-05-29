@@ -7,11 +7,12 @@ import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaPinterestP, FaSound
 
 const SocialLink = styled.a`
     color: ${() => Koji.config.colors.socialColor};
-    margin: .5em;
+    padding: 0 .25em;
 `
 
 const Container = styled.div`
     width: 100%;
+    margin: 1em 0;
 `
 // Add new Social links here and to .koji/customization/social.json
 const facebook = "https://facebook.com/"

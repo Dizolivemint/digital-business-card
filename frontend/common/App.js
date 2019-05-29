@@ -22,7 +22,7 @@ import styled from 'styled-components';
 import Router from './Router';
 import Koji from 'koji-tools';
 
-import Font from '../pages/HomePage/helpers/Font.js'
+import Font from 'common/helpers/Font'
 
 // function getFontFamily(ff) {
 //     const start = ff.indexOf('family=');

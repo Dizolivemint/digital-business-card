@@ -1,0 +1,7 @@
+{
+	"pages": [{
+		"name": "BackPage",
+        "route": "/backpage",
+        "path": "frontend/pages/BackPage"
+	}]
+}

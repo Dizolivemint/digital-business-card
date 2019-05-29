@@ -122,6 +122,7 @@ module.exports = {
     ]
   },
   devServer: {
+    historyApiFallback: true,
     compress: true,
     port: 8080,
     host: '0.0.0.0',
