@@ -152,7 +152,7 @@ class FrontPage extends React.Component {
     render() {
         return (
             <Container>
-                <Flip to="/backpage">
+                <Flip to="/back">
                         <TiArrowBackOutline size="24"/>
                 </Flip>
                 <ExtLink
