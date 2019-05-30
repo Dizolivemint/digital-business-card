@@ -3,11 +3,9 @@ import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
 import { FaSearchLocation, FaPhone } from 'react-icons/fa';
 import { IoIosMail } from "react-icons/io";
-import { TiArrowBackOutline } from "react-icons/ti";
 
 import Social from "./components/Social";
-import Font from 'common/helpers/Font'
-import Flip from 'common/components/Flip'
+import Font from './helpers/Font'
 
 const Container = styled.div`
     background-color: ${() => Koji.config.colors.backgroundColor};
@@ -67,7 +65,7 @@ const Content = styled.div`
   padding-bottom: 8px;
 `;
 
-const ExtLink = styled.a`
+const Link = styled.a`
     color: ${() => Koji.config.colors.linkColor};
     text-decoration: none;
     padding: 0 8px 8px 8px;
@@ -110,7 +108,7 @@ const Company = styled(Column)`
     }
 `;
 
-const Address = styled(ExtLink)`
+const Address = styled(Link)`
     font-size: calc(10px + ${() => Koji.config.layout.addressFontSize});
 `;
 
@@ -118,13 +116,31 @@ const Phone = styled(Address)``;
 
 const Email = styled(Address)``;
 
+// Provides caching so functions that return the same result aren't executed multiple times
+function memoize(func) {
+  let cache = new Map();
+  const memoized = function (...args) {
+    let key = args[0];
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    let result = func.apply(this, args);
+    cache.set(key, result);
+    return result;
+  };
+  return memoized;
+}
+
 // Create the Google Maps address
 function getMapUri() {
   let mapUri = `https://www.google.com/maps/place/${Koji.config.strings.companyAddress},${Koji.config.strings.companyCity},${Koji.config.strings.companyState}+${Koji.config.strings.companyZip}`
   return mapUri.replace(/ /g, "+");
 }
 
-class FrontPage extends React.Component {
+// Create the Google Maps address once, even if called multiple times
+let memoizedUri = memoize(getMapUri);
+
+class HomePage extends React.Component {
     constructor(props) {
         super(props);
 
@@ -152,12 +168,7 @@ class FrontPage extends React.Component {
     render() {
         return (
             <Container>
-                {(Koji.config.layout.hasBack) && 
-                    <Flip to="/back">
-                            <TiArrowBackOutline size="24"/>
-                    </Flip>
-                }
-                <ExtLink
+                <Link
                 margin="1em"
                 href={Koji.config.strings.websiteUrl}
                 target="_blank"
@@ -170,7 +181,7 @@ class FrontPage extends React.Component {
                             {Koji.config.strings.companyName}
                         </CompanyName>
                     </Title>
-                </ExtLink>              
+                </Link>              
                 <Company>
                     <Title colWidth="100%">
 
@@ -246,11 +257,11 @@ class FrontPage extends React.Component {
 
                         </Column>
                     </Email>
-                    <Social/>
                 </Company>
+                <Social/>
             </Container>
         );
     }
 }
 
-export default FrontPage;
+export default HomePage;

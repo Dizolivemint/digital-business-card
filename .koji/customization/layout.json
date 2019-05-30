@@ -11,7 +11,8 @@
     "companyFontFamily": "https://fonts.googleapis.com/css?family=Dosis",
     "companyFontSize": "1.2vmin",
     "addressFontSize": "1.25vmin",
-    "baseFontSize": "2vmin"
+    "baseFontSize": "2vmin",
+    "hasBack": true
   },
   "@@editor": [
     {
@@ -82,6 +83,11 @@
         {
           "key": "icons",
           "description": "Display address field icons?",
+          "type": "boolean"
+        },
+        {
+          "key": "hasBack",
+          "description": "Back side of card?",
           "type": "boolean"
         }
       ]
