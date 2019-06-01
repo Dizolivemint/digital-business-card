@@ -163,6 +163,7 @@ class FrontPage extends React.Component {
                 href={Koji.config.strings.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Link to website"
                 >
 
                     <Logo src={Koji.config.images.logo} />
@@ -191,6 +192,8 @@ class FrontPage extends React.Component {
                     href={this.state.mapUri}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Map to address"
+                    aria-role="application"
                     >    
                         <Icon colWidth="2em">
 
@@ -215,6 +218,7 @@ class FrontPage extends React.Component {
                     href={"tel:" + Koji.config.strings.companyPhone}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Phone number"
                     >
                         <Icon colWidth="2em">
 
@@ -233,6 +237,7 @@ class FrontPage extends React.Component {
                     href={"mailto:" + Koji.config.strings.email}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={Koji.config.strings.email}
                     >
                         <Icon colWidth="2em">
 
