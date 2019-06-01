@@ -136,7 +136,8 @@ class FrontPage extends React.Component {
     }
 
     componentDidMount() {
-        Koji.request(Koji.routes.SampleRoute).then((e) => this.setState({ response: e.response }));
+        // Sample backend route request
+        // Koji.request(Koji.routes.SampleRoute).then((e) => this.setState({ response: e.response }));
 
         // Force an update of the dom on prop changes
         // This is just for development situations so

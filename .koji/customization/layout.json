@@ -12,7 +12,7 @@
     "companyFontSize": "1.2vmin",
     "addressFontSize": "1.25vmin",
     "baseFontSize": "2vmin",
-    "hasBack": true
+    "hasBack": false
   },
   "@@editor": [
     {

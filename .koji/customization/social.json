@@ -1,13 +1,13 @@
 {
   "social": {
-    "facebook": "madewithkoji",
-    "github": "GoMeta",
-    "instagram": "madewithkoji",
-    "linkedin": "milesexner",
-    "pinterest": "dizolivemint",
-    "soundcloud": "dizolivemint",
-    "youtube": "UCWH5h68MVkFC8CoLTiYNfWA",
-    "twitter": "dizolivemint"
+    "facebook": "https://facebook.com/madewithkoji",
+    "github": "https://github.com/GoMeta",
+    "instagram": "https://www.instagram.com/madewithkoji",
+    "linkedin": "https://www.linkedin.com/in/milesexner",
+    "pinterest": "https://www.pinterest.com/dizolivemint",
+    "soundcloud": "https://soundcloud.com/dizolivemint",
+    "youtube": "https://www.youtube.com/channel/UCWH5h68MVkFC8CoLTiYNfWA",
+    "twitter": "https://twitter.com/dizolivemint"
   },
   "@@editor": [
     {
