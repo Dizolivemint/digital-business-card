@@ -146,7 +146,7 @@ class FrontPage extends React.Component {
             this.forceUpdate();
         })
 
-        this.setState({mapUri: getMapUri()});
+        // this.setState({mapUri: getMapUri()});
     }
 
     // Control the margins and column widths with margin and colWidth
