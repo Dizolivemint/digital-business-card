@@ -166,7 +166,10 @@ class FrontPage extends React.Component {
                 aria-label="Link to website"
                 >
 
-                    <Logo src={Koji.config.images.logo} />
+                    <Logo 
+                    src={Koji.config.images.logo} 
+                    alt="Logo image"
+                    />
                     <Title colWidth="100%">
                         <CompanyName>
                             {Koji.config.strings.companyName}
