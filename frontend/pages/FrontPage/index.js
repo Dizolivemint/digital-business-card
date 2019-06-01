@@ -15,7 +15,7 @@ const Container = styled.div`
         background: linear-gradient(${Koji.config.layout.angleGradient}deg, ${Koji.config.colors.gradientColor01} 0%, ${Koji.config.colors.gradientColor02} 35%, ${Koji.config.colors.gradientColor03} 100%)`};
     
     ${() => Koji.config.layout.useBackgroundImage && `
-        background-image: url(${Koji.config.images.background})`};
+        background: ${Koji.config.colors.backgroundColor} url(${Koji.config.images.background}) no-repeat fixed center`};
         
     min-height: 100vh;
     display: flex;
@@ -196,7 +196,7 @@ class FrontPage extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Map to address"
-                    aria-role="application"
+                    role="application"
                     >    
                         <Icon colWidth="2em">
 
