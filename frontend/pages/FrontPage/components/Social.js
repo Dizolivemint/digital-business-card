@@ -1,5 +1,4 @@
 // Add new Social links to .koji/customization/social.json
-
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
@@ -15,6 +14,7 @@ const SocialLink = styled.a`
 const Container = styled.div`
     width: 100%;
     margin: 1em 0;
+    font-size: calc(12px + ${() => Koji.config.layout.addressFontSize});
 `
 
 

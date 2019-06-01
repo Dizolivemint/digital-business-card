@@ -8,28 +8,8 @@ import { TiArrowBackOutline } from "react-icons/ti";
 import Social from "./components/Social";
 import Font from 'common/helpers/Font'
 import Flip from 'common/components/Flip'
-
-const Container = styled.div`
-    background-color: ${() => Koji.config.colors.backgroundColor};
-    ${() => Koji.config.layout.useGradient && `
-        background: linear-gradient(${Koji.config.layout.angleGradient}deg, ${Koji.config.colors.gradientColor01} 0%, ${Koji.config.colors.gradientColor02} 35%, ${Koji.config.colors.gradientColor03} 100%)`};
-    
-    ${() => Koji.config.layout.useBackgroundImage && `
-        background: ${Koji.config.colors.backgroundColor} url(${Koji.config.images.background}) no-repeat fixed center`};
-        
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: calc(10px + ${() => Koji.config.layout.defaultFontSize});
-    color: ${() => Koji.config.colors.textColor};
-    text-align: ${() => Koji.config.layout.alignAddress};
-    justify-content: center;
-    @media (max-width: 1280px) {
-        flex-direction: column;
-    }
-`;
+import Container from 'common/components/Container'
+import ExtLink from 'common/components/ExtLink'
 
 const CompanyName = styled.p`
     margin: 0;
@@ -54,31 +34,10 @@ const H2Title = styled.p`
     margin: ${props => props.margin};
 `;
 
-const AppLogoSpin = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
 const Content = styled.div`
   padding-bottom: 8px;
 `;
 
-const ExtLink = styled.a`
-    color: ${() => Koji.config.colors.linkColor};
-    text-decoration: none;
-    padding: 0 8px 8px 8px;
-    display: flex;
-    text-align: ${() => Koji.config.layout.alignAddress};
-    flex-wrap: wrap;
-    width: ${props => props.colWidth};
-    margin: 0 0 .5em 0;
-    margin: ${props => props.margin};
-    justify-content: center;
-`;
 
 const Logo = styled.img`
     height: 25vmin;
@@ -105,13 +64,14 @@ const Company = styled(Column)`
     display: flex;
     text-align: ${() => Koji.config.layout.alignAddress};
     flex-wrap: wrap;
+    font-size: calc(10px + ${() => Koji.config.layout.addressFontSize});
     @media (min-width: 1280px) {
         width: 50%
     }
 `;
 
 const Address = styled(ExtLink)`
-    font-size: calc(10px + ${() => Koji.config.layout.addressFontSize});
+    // font-size: calc(10px + ${() => Koji.config.layout.addressFontSize});
 `;
 
 const Phone = styled(Address)``;
