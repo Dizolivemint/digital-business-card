@@ -51,14 +51,6 @@ const Column = styled.div`
     justify-content: ${() => Koji.config.layout.alignAddress};
 `;
 
-const Icon = styled(Column)`
-
-`;
-
-const Title = styled(Column)`
-    
-`;
-
 const Company = styled(Column)`
     padding: 0 8px 8px 8px;
     display: flex;
@@ -74,10 +66,6 @@ const Address = styled(ExtLink)`
     // font-size: calc(10px + ${() => Koji.config.layout.addressFontSize});
 `;
 
-const Phone = styled(Address)``;
-
-const Email = styled(Address)``;
-
 // Create the Google Maps address
 function getMapUri() {
   let mapUri = `https://www.google.com/maps/place/${Koji.config.strings.companyAddress},${Koji.config.strings.companyCity},${Koji.config.strings.companyState}+${Koji.config.strings.companyZip}`
@@ -91,13 +79,16 @@ class FrontPage extends React.Component {
         this.state = {
             response: '',
             icons: Koji.config.layout.icons,
-            mapUri: "https://www.google.com/maps"
+            mapUrl: "https://www.google.com/maps"
         };
     }
 
     componentDidMount() {
         // Sample backend route request
-        // Koji.request(Koji.routes.SampleRoute).then((e) => this.setState({ response: e.response }));
+        Koji.request(Koji.routes.SampleRoute).then((e) => {
+            this.setState({ mapUrl: e.response })
+            console.log("Response: ", e.response)
+        });
 
         // Force an update of the dom on prop changes
         // This is just for development situations so
@@ -106,7 +97,11 @@ class FrontPage extends React.Component {
             this.forceUpdate();
         })
 
-        // this.setState({mapUri: getMapUri()});
+        // getMapUri().then((response) => {
+        //     this.setState({
+        //         mapUri: response
+        //     })
+        // })
     }
 
     // Control the margins and column widths with margin and colWidth
@@ -130,19 +125,19 @@ class FrontPage extends React.Component {
                     src={Koji.config.images.logo} 
                     alt="Logo image"
                     />
-                    <Title colWidth="100%">
+                    <Column colWidth="100%">
                         <CompanyName>
                             {Koji.config.strings.companyName}
                         </CompanyName>
-                    </Title>
+                    </Column>
                 </ExtLink>              
                 <Company>
-                    <Title colWidth="100%">
+                    <Column colWidth="100%">
 
                         <H1Name>{Koji.config.strings.name}</H1Name>
 
-                    </Title>
-                    <Title colWidth="100%">
+                    </Column>
+                    <Column colWidth="100%">
 
                         <H2Title
                         margin="0 0 1.5em"
@@ -150,21 +145,21 @@ class FrontPage extends React.Component {
                             {Koji.config.strings.title}
                         </H2Title>  
 
-                    </Title>
+                    </Column>
                     <Address 
-                    href={this.state.mapUri}
+                    href={this.state.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Map to address"
                     role="application"
                     >    
-                        <Icon colWidth="2em">
+                        <Column colWidth="2em">
 
                             {(this.state.icons) &&
                                 <FaSearchLocation />
                             }
 
-                        </Icon>
+                        </Column>
                         <Column colWidth="auto">
 
                                 {Koji.config.strings.companyAddress}
@@ -177,44 +172,44 @@ class FrontPage extends React.Component {
                         </Column>
                     </Address>
 
-                    <Phone 
+                    <Address 
                     href={"tel:" + Koji.config.strings.companyPhone}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Phone number"
                     >
-                        <Icon colWidth="2em">
+                        <Column colWidth="2em">
 
                             {(this.state.icons) &&
                                 <FaPhone />
                             }
 
-                        </Icon>
+                        </Column>
                         <Column colWidth="auto">
 
                                 {Koji.config.strings.companyPhone}
 
                         </Column>
-                    </Phone>
-                    <Email 
+                    </Address>
+                    <Address 
                     href={"mailto:" + Koji.config.strings.email}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={Koji.config.strings.email}
                     >
-                        <Icon colWidth="2em">
+                        <Column colWidth="2em">
 
                             {(this.state.icons) &&
                                 <IoIosMail />
                             }
 
-                        </Icon>
+                        </Column>
                         <Column colWidth="auto">
 
                                 {Koji.config.strings.email}
 
                         </Column>
-                    </Email>
+                    </Address>
                     <Social/>
                 </Company>
             </Container>

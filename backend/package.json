@@ -2,19 +2,21 @@
   "name": "koji-project-backend",
   "version": "1.0.0",
   "scripts": {
+    "prestart": "koji-tools watch &",
     "compile": "babel . -d dist --copy-files --ignore \"node_modules/**/*.js\"",
     "start": "NODE_ENV=development babel-watch -L --watch ../.koji/ index.js"
   },
   "dependencies": {
+    "@madewithjiro/jiro-sdk": "^1.0.12",
+    "aws-serverless-express": "3.3.5",
     "babel-polyfill": "^6.26.0",
+    "bcryptjs": "2.4.3",
     "body-parser": "^1.18.3",
     "express": "4.16.3",
-    "isomorphic-fetch": "^2.2.1",
-    "@madewithjiro/jiro-sdk": "^1.0.12",
-    "uuid": "3.3.2",
     "gulp-babel": "8.0.0",
-    "bcryptjs": "2.4.3",
-    "aws-serverless-express": "3.3.5"
+    "isomorphic-fetch": "^2.2.1",
+    "koji-tools": "^0.5.0",
+    "uuid": "3.3.2"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",

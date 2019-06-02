@@ -11,7 +11,11 @@
  *   edit this file to create any backend routes that you want
  */
 
+import Koji from 'koji-tools';
+
 export default async (req, res) => {
-    console.log('request running...');
-    res.status(200).json({ response: 'Hello World!' });
+    // Create the Google Maps address
+    let mapUrl = `https://www.google.com/maps/place/${Koji.config.strings.companyAddress},${Koji.config.strings.companyCity},${Koji.config.strings.companyState}+${Koji.config.strings.companyZip}`
+    mapUrl.replace(/ /g, "+")
+    res.status(200).json({ response: mapUrl});
 }
