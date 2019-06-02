@@ -26,6 +26,7 @@ class Social extends Component {
         {(Koji.config.social.facebook) &&
           <SocialLink 
           href={Koji.config.social.facebook}
+          target="_blank"
           aria-label="Facebook profile"
           >
             <FaFacebookF />
@@ -35,6 +36,7 @@ class Social extends Component {
         {(Koji.config.social.github) &&
           <SocialLink 
           href={Koji.config.social.github}
+          target="_blank"
           aria-label="GitHub profile"
           >
             <FaGithub />
@@ -44,6 +46,7 @@ class Social extends Component {
         {(Koji.config.social.instagram) &&
           <SocialLink 
           href={Koji.config.social.instagram}
+          target="_blank"
           aria-label="Instagram profile"
           >
             <FaInstagram />
@@ -53,6 +56,7 @@ class Social extends Component {
         {(Koji.config.social.linkedin) &&
           <SocialLink 
           href={Koji.config.social.linkedin}
+          target="_blank"
           aria-label="LinkedIn profile"
           >
             <FaLinkedinIn />
@@ -62,6 +66,7 @@ class Social extends Component {
         {(Koji.config.social.pinterest) &&
           <SocialLink 
           href={Koji.config.social.pinterest}
+          target="_blank"
           aria-label="Pinterest profile"
           >
             <FaPinterestP />
@@ -71,6 +76,7 @@ class Social extends Component {
         {(Koji.config.social.soundcloud) &&
           <SocialLink 
           href={Koji.config.social.soundcloud}
+          target="_blank"
           aria-label="SoundCloud profile">
             <FaSoundcloud />
           </SocialLink>
@@ -79,6 +85,7 @@ class Social extends Component {
         {(Koji.config.social.twitter) &&
           <SocialLink 
           href={Koji.config.social.twitter}
+          target="_blank"
           aria-label="Twitter profile">
             <FaTwitter />
           </SocialLink>
@@ -87,6 +94,7 @@ class Social extends Component {
         {(Koji.config.social.youtube) &&
           <SocialLink 
           href={Koji.config.social.youtube}
+          target="_blank"
           aria-label="YouTube profile"
           >
             <FaYoutube />
