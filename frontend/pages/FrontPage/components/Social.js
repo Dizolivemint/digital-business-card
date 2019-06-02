@@ -28,6 +28,7 @@ class Social extends Component {
           href={Koji.config.social.facebook}
           target="_blank"
           aria-label="Facebook profile"
+          rel="noopener noreferrer"
           >
             <FaFacebookF />
           </SocialLink>
@@ -38,6 +39,7 @@ class Social extends Component {
           href={Koji.config.social.github}
           target="_blank"
           aria-label="GitHub profile"
+          rel="noopener noreferrer"
           >
             <FaGithub />
           </SocialLink>
@@ -48,6 +50,7 @@ class Social extends Component {
           href={Koji.config.social.instagram}
           target="_blank"
           aria-label="Instagram profile"
+          rel="noopener noreferrer"
           >
             <FaInstagram />
           </SocialLink>
@@ -58,6 +61,7 @@ class Social extends Component {
           href={Koji.config.social.linkedin}
           target="_blank"
           aria-label="LinkedIn profile"
+          rel="noopener noreferrer"
           >
             <FaLinkedinIn />
           </SocialLink>
@@ -68,6 +72,7 @@ class Social extends Component {
           href={Koji.config.social.pinterest}
           target="_blank"
           aria-label="Pinterest profile"
+          rel="noopener noreferrer"
           >
             <FaPinterestP />
           </SocialLink>
@@ -78,6 +83,7 @@ class Social extends Component {
           href={Koji.config.social.soundcloud}
           target="_blank"
           aria-label="SoundCloud profile">
+          rel="noopener noreferrer"
             <FaSoundcloud />
           </SocialLink>
         }

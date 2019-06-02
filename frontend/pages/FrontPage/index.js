@@ -37,11 +37,6 @@ const Content = styled.div`
 class FrontPage extends React.Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            response: '',
-            mapUrl: "https://www.google.com/maps"
-        };
     }
 
     componentDidMount() {
