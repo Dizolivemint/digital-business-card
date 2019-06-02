@@ -8,13 +8,13 @@ import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaPinterestP, FaSound
 
 const SocialLink = styled.a`
     color: ${() => Koji.config.colors.socialColor};
-    padding: 0 .25em;
+    display: inline-block;
+    padding: 14px 16px;
 `
 
 const Container = styled.div`
-    width: 100%;
     margin: 1em 0;
-    font-size: calc(12px + ${() => Koji.config.layout.addressFontSize});
+    font-size: calc(14px + ${() => Koji.config.layout.addressFontSize});
 `
 
 

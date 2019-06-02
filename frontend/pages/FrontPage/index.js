@@ -62,16 +62,6 @@ const Company = styled(Column)`
     }
 `;
 
-const Address = styled(ExtLink)`
-    // font-size: calc(10px + ${() => Koji.config.layout.addressFontSize});
-`;
-
-// Create the Google Maps address
-function getMapUri() {
-  let mapUri = `https://www.google.com/maps/place/${Koji.config.strings.companyAddress},${Koji.config.strings.companyCity},${Koji.config.strings.companyState}+${Koji.config.strings.companyZip}`
-  return mapUri.replace(/ /g, "+");
-}
-
 class FrontPage extends React.Component {
     constructor(props) {
         super(props);
@@ -84,7 +74,7 @@ class FrontPage extends React.Component {
     }
 
     componentDidMount() {
-        // Sample backend route request
+        // Backend route request for google map address (slower than frontend, no difference in performance)
         Koji.request(Koji.routes.SampleRoute).then((e) => {
             this.setState({ mapUrl: e.response })
             console.log("Response: ", e.response)
@@ -97,11 +87,6 @@ class FrontPage extends React.Component {
             this.forceUpdate();
         })
 
-        // getMapUri().then((response) => {
-        //     this.setState({
-        //         mapUri: response
-        //     })
-        // })
     }
 
     // Control the margins and column widths with margin and colWidth
@@ -146,7 +131,7 @@ class FrontPage extends React.Component {
                         </H2Title>  
 
                     </Column>
-                    <Address 
+                    <ExtLink 
                     href={this.state.mapUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -170,9 +155,9 @@ class FrontPage extends React.Component {
 
 
                         </Column>
-                    </Address>
+                    </ExtLink>
 
-                    <Address 
+                    <ExtLink 
                     href={"tel:" + Koji.config.strings.companyPhone}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -190,8 +175,8 @@ class FrontPage extends React.Component {
                                 {Koji.config.strings.companyPhone}
 
                         </Column>
-                    </Address>
-                    <Address 
+                    </ExtLink>
+                    <ExtLink 
                     href={"mailto:" + Koji.config.strings.email}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -209,7 +194,7 @@ class FrontPage extends React.Component {
                                 {Koji.config.strings.email}
 
                         </Column>
-                    </Address>
+                    </ExtLink>
                     <Social/>
                 </Company>
             </Container>
