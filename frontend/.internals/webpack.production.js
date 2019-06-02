@@ -22,7 +22,7 @@ module.exports = {
   mode: 'production',
   entry: "./common/index.js",
   output: {
-    path: path.resolve(process.cwd(), 'build'),
+    path: path.resolve(process.cwd(), 'dist'),
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
     publicPath: '/',
