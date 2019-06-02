@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
 
-import Column from 'common/components/Column'
+import Column from '../../../common/components/Column'
 
 const Company = styled(Column)`
     padding: 0 8px 8px 8px;

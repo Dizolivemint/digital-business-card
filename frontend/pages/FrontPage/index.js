@@ -3,9 +3,9 @@ import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
 import { TiArrowBackOutline } from "react-icons/ti";
 
-import Flip from 'common/components/Flip'
-import Container from 'common/components/Container'
-import Column from 'common/components/Column'
+import Flip from '../../common/components/Flip'
+import Container from '../../common/components/Container'
+import Column from '../../common/components/Column'
 
 import Website from './components/Website'
 import Company from './components/Company'

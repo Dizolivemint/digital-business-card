@@ -4,8 +4,8 @@ import Koji from 'koji-tools';
 
 import { IoIosMail } from "react-icons/io";
 
-import ExtLink from 'common/components/ExtLink'
-import Column from 'common/components/Column'
+import ExtLink from '../../../common/components/ExtLink'
+import Column from '../../../common/components/Column'
         
 class Email extends Component {
     render() {

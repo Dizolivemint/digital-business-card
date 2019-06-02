@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
 
-import Font from 'common/helpers/Font'
-import ExtLink from 'common/components/ExtLink'
-import Column from 'common/components/Column'
+import Font from '../../../common/helpers/Font'
+import ExtLink from '../../../common/components/ExtLink'
+import Column from '../../../common/components/Column'
 
 const CompanyName = styled.p`
     margin: 0;

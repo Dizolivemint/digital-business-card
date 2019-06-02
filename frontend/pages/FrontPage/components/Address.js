@@ -4,8 +4,8 @@ import Koji from 'koji-tools';
 
 import { FaSearchLocation } from 'react-icons/fa';
 
-import ExtLink from 'common/components/ExtLink'
-import Column from 'common/components/Column'
+import ExtLink from '../../../common/components/ExtLink'
+import Column from '../../../common/components/Column'
         
 class Address extends Component {
     constructor(props) {
