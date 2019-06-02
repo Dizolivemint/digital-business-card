@@ -4,8 +4,8 @@
   "description": "A sample project",
   "author": "username",
   "scripts": {
-    "webpack": "NODE_ENV=production webpack --config ./.internals/webpack.production.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "build": "npx parcel build common/index.html",
+    "build": "NODE_ENV=production webpack --config ./.internals/webpack.production.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "parcel": "npx parcel build common/index.html",
     "postbuild": "koji-tools pwa",
     "prestart": "koji-tools watch &",
     "start": "webpack-dev-server --config ./.internals/webpack.development.js --inline --hot"

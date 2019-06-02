@@ -2,7 +2,7 @@
   "deploy": {
     "subdomain": ".withkoji.com",
     "frontend": {
-      "output": "frontend/dist",
+      "output": "frontend/build",
       "commands": [
         "cd frontend",
         "npm install",
