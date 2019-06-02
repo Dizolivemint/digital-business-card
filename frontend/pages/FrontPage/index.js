@@ -3,25 +3,17 @@ import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
 import { TiArrowBackOutline } from "react-icons/ti";
 
-import Font from 'common/helpers/Font'
 import Flip from 'common/components/Flip'
 import Container from 'common/components/Container'
 import Column from 'common/components/Column'
-import ExtLink from 'common/components/ExtLink'
 
+import Website from './components/Website'
 import Company from './components/Company'
 import Address from './components/Address'
 import Phone from './components/Phone'
 import Email from './components/Email'
 import Social from './components/Social'
 
-const CompanyName = styled.p`
-    margin: 0;
-    font-family: '${() => Font.getFontFamily(Koji.config.layout.companyFontFamily)}', sans-serif;
-    font-size: calc(10px + ${() => Koji.config.layout.companyFontSize});
-    text-align: center;
-    
-`
 const H1Name = styled.h1`
     font-size: calc(10px + 4vmin);
     letter-spacing: ${() => Koji.config.layout.nameLetterSpacing};
@@ -40,12 +32,6 @@ const H2Title = styled.p`
 
 const Content = styled.div`
   padding-bottom: 8px;
-`;
-
-
-const Logo = styled.img`
-    height: 25vmin;
-    pointer-events: none;
 `;
 
 class FrontPage extends React.Component {
@@ -77,24 +63,7 @@ class FrontPage extends React.Component {
                             <TiArrowBackOutline size="24"/>
                     </Flip>
                 }
-                <ExtLink
-                margin="1em"
-                href={Koji.config.strings.websiteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Link to website"
-                >
-
-                    <Logo 
-                    src={Koji.config.images.logo} 
-                    alt="Logo image"
-                    />
-                    <Column colWidth="100%">
-                        <CompanyName>
-                            {Koji.config.strings.companyName}
-                        </CompanyName>
-                    </Column>
-                </ExtLink>              
+                <Website/>            
                 <Company>
                     <Column colWidth="100%">
 
