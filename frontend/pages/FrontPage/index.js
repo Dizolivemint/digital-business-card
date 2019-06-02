@@ -68,14 +68,13 @@ class FrontPage extends React.Component {
 
         this.state = {
             response: '',
-            icons: Koji.config.layout.icons,
             mapUrl: "https://www.google.com/maps"
         };
     }
 
     componentDidMount() {
         // Backend route request for google map address (slower than frontend, no difference in performance)
-        Koji.request(Koji.routes.SampleRoute).then((e) => {
+        Koji.request(Koji.routes.GetMap).then((e) => {
             this.setState({ mapUrl: e.response })
             console.log("Response: ", e.response)
         });
@@ -140,9 +139,7 @@ class FrontPage extends React.Component {
                     >    
                         <Column colWidth="2em">
 
-                            {(this.state.icons) &&
-                                <FaSearchLocation />
-                            }
+                            <FaSearchLocation />
 
                         </Column>
                         <Column colWidth="auto">
@@ -165,9 +162,7 @@ class FrontPage extends React.Component {
                     >
                         <Column colWidth="2em">
 
-                            {(this.state.icons) &&
-                                <FaPhone />
-                            }
+                            <FaPhone />
 
                         </Column>
                         <Column colWidth="auto">
@@ -184,9 +179,7 @@ class FrontPage extends React.Component {
                     >
                         <Column colWidth="2em">
 
-                            {(this.state.icons) &&
-                                <IoIosMail />
-                            }
+                            <IoIosMail />
 
                         </Column>
                         <Column colWidth="auto">

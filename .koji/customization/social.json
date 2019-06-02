@@ -19,42 +19,50 @@
         {
           "key": "facebook",
           "name": "Facebook",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your Facebook profile"
         },
         {
           "key": "github",
           "name": "GitHub",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your GitHub profile"
         },
         {
           "key": "instagram",
           "name": "Instagram",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your Instagram profile"
         },
         {
           "key": "linkedin",
           "name": "LinkedIn",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your LinkedIn profile"
         },
         {
           "key": "pinterest",
           "name": "Pinterest",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your Pinterest profile"
         },
         {
           "key": "soundcloud",
           "name": "SoundCloud",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your SoundCloud profile"
         },
         {
           "key": "twitter",
           "name": "Twitter",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your Twitter profile"
         },
         {
           "key": "youtube",
           "name": "YouTube",
-          "type": "text"
+          "type": "text",
+          "description": "URL to your YouTube profile"
         }
       ]
     }

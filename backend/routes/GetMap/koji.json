@@ -1,0 +1,9 @@
+{
+  "routes": [{
+    "name": "GetMap",
+    "path": "backend/routes/GetMap",
+    "route": "/map",
+    "method": "GET",
+    "isProtected": false
+  }]
+}

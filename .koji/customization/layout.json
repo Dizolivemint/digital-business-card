@@ -4,14 +4,12 @@
     "alignAddress": "center",
     "useGradient": true,
     "angleGradient": "15",
-    "icons": true,
     "useBackgroundImage": false,
     "titleLetterSpacing": "3vmin",
     "nameLetterSpacing": "",
     "companyFontFamily": "https://fonts.googleapis.com/css?family=Dosis",
     "companyFontSize": "1.2vmin",
     "addressFontSize": "1.25vmin",
-    "baseFontSize": "2vmin",
     "hasBack": false
   },
   "@@editor": [
@@ -23,44 +21,39 @@
       "fields": [
         {
           "key": "fontFamily",
-          "name": "Font family",
-          "description": "Google fonts link to font to use on page."
-        },
-        {
-          "key": "baseFontSize",
-          "name": "Font size (base)",
-          "description": "Font size increase from 10px for all elements."
+          "name": "Address links | Font family",
+          "description": "Google fonts link to font to use for address links."
         },
         {
           "key": "addressFontSize",
-          "name": "Font size",
+          "name": "Address links | Font size",
           "description": "Font size increase from 10px for address elements."
         },
         {
+          "key": "alignAddress",
+          "name": "Address links | Text alignment",
+          "description": "Address text alignment (center, left or right).",
+          "type": "text"
+        },
+        {
           "key": "companyFontFamily",
-          "name": "Font family",
+          "name": "Company name | Font family",
           "description": "Google fonts link to font to use for the company name."
         },
         {
           "key": "companyFontSize",
-          "name": "Font size",
+          "name": "Company name | Font size",
           "description": "Font size increase from 10px for company name."
         },
         {
           "key": "nameLetterSpacing",
-          "name": "Name letter spacing",
+          "name": "Your name | Letter spacing",
           "description": "Set the number of pixels to space the letters of your name."
         },
         {
           "key": "titleLetterSpacing",
-          "name": "Title letter spacing",
+          "name": "Job title | Letter spacing",
           "description": "Set the number of pixels to space the letters of your title."
-        },
-        {
-          "key": "alignAddress",
-          "name": "Text alignment",
-          "description": "Address text alignment (center, left or right).",
-          "type": "text"
         },
         {
           "key": "useBackgroundImage",
@@ -79,11 +72,6 @@
           "name": "Gradient angle in degrees",
           "description": "Type in an angle for the gradient.",
           "type": "text"
-        },
-        {
-          "key": "icons",
-          "description": "Display address field icons?",
-          "type": "boolean"
         },
         {
           "key": "hasBack",

@@ -13,7 +13,7 @@
         {
           "key": "logo",
           "name": "Logo",
-          "description": "Company logo",
+          "description": "Company logo (320 x 320 pixel is optimal)",
           "type": "image"
         },
         {

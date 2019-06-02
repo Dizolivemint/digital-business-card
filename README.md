@@ -12,15 +12,17 @@ Change out icons using the included [react-icons library](https://react-icons.ne
 
 -------
 # Where to go
-1. Your Frontend code is located at /frontend/pages and there is an example page at [HomePage](#~/frontend/pages/HomePage/index.js)
-2. Your Backend code is located at /backend/routes and there is an example route at [SampleRoute](#~/backend/routes/SampleRoute/index.js)
-3. 3 Visual Customization Controls (VCCs) have been added to the template. These can be quickly modified to your applicaiton
+1. The front of your digital business card is located at frontend/pages/[FrontPage](#~/frontend/pages/FrontPage/index.js)
+2. The Backend code is located at /backend/routes
+3. The route that generates the map URL is located at /backend/routes/[GetMap](#~/backend/routes/GetMap/index.js)
+4. 3 Visual Customization Controls (VCCs) have been added to the template. These can be quickly modified to your applicaiton
     - [Colors](#~/.koji/customization/colors.json!visual) - Change the text color, background color, & link text color.
     - [Images](#~/.koji/customization/images.json!visual) - Change out the logo and background. 
     - [Strings](#~/.koji/customization/strings.json!visual) - Change the out your information.
-    - [Layout](#~/.koji/customization/layout.json!visual) - Change background type, font options, text alignment, and icon display.
+    - [Layout](#~/.koji/customization/layout.json!visual) - Change background type, font options, text alignment, and link to the back of your card.
     - [Social](#~/.koji/customization/social.json!visual) - Change or remove social media profiles.
-4. Find logos, backgrounds, and any other assets you may need at [Awesome Design Tools](https://flawlessapp.io/designtools)
+5. Find logos, backgrounds, and any other assets you may need at [Awesome Design Tools](https://flawlessapp.io/designtools)
+6. Customize the back of your card any way you want and be sure to turn on the link in [Layout](#~/.koji/customization/layout.json!visual).
 
 ## Any Questions?
 
