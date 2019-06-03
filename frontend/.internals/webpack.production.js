@@ -150,7 +150,7 @@ module.exports = {
   ],
   resolve: {
     modules: ['node_modules', 'frontend'],
-    extensions: ['.mjs', '.js', '.jsx', '.react.js'],
+    extensions: ['.esm.js', '.js', '.jsx', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main'],
   }
 };
