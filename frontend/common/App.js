@@ -24,14 +24,6 @@ import Koji from 'koji-tools';
 
 import Font from './helpers/Font'
 
-// function getFontFamily(ff) {
-//     const start = ff.indexOf('family=');
-//     if(start === -1) return 'sans-serif';
-//     let end = ff.indexOf('&', start);
-//     if(end === -1) end = undefined;
-//     return ff.slice(start + 7, end);
-// }
-
 const Container = styled.div`
     padding: 0;
     margin: 0;

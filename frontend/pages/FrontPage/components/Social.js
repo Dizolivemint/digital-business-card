@@ -82,8 +82,8 @@ class Social extends Component {
           <SocialLink 
           href={Koji.config.social.soundcloud}
           target="_blank"
-          aria-label="SoundCloud profile">
-          rel="noopener noreferrer"
+          aria-label="SoundCloud profile"
+          rel="noopener noreferrer">
             <FaSoundcloud />
           </SocialLink>
         }
@@ -92,7 +92,8 @@ class Social extends Component {
           <SocialLink 
           href={Koji.config.social.twitter}
           target="_blank"
-          aria-label="Twitter profile">
+          aria-label="Twitter profile"
+          rel="noopener noreferrer">
             <FaTwitter />
           </SocialLink>
         }
@@ -102,6 +103,7 @@ class Social extends Component {
           href={Koji.config.social.youtube}
           target="_blank"
           aria-label="YouTube profile"
+          rel="noopener noreferrer"
           >
             <FaYoutube />
           </SocialLink>

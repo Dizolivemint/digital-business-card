@@ -44,7 +44,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
+            presets: ['@babel/preset-env', '@babel/preset-react', { modules: false }]
           }
         }
       },
@@ -150,7 +150,7 @@ module.exports = {
   ],
   resolve: {
     modules: ['node_modules', 'frontend'],
-    extensions: ['.js', '.jsx', '.react.js'],
+    extensions: ['.mjs', '.js', '.jsx', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main'],
   }
 };
