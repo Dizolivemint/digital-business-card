@@ -17,11 +17,15 @@ class Address extends Component {
     }
 
     componentDidMount() {
-        // Backend route request for google map address (slower than frontend, no difference in performance)
-        Koji.request(Koji.routes.GetMap).then((e) => {
-            this.setState({ mapUrl: e.response })
-            console.log("Response: ", e.response)
-        });
+        // Example backend route request for google map address 
+        // Koji.request(Koji.routes.GetMap).then((e) => {
+        //     this.setState({ mapUrl: e.response })
+        //     console.log("Response: ", e.response)
+        // });
+
+        let mapUrl = `https://www.google.com/maps/place/${Koji.config.strings.companyAddress},${Koji.config.strings.companyCity},${Koji.config.strings.companyState}+${Koji.config.strings.companyZip}`
+        mapUrl.replace(/ /g, "+")
+        this.setState({ mapUrl: mapUrl})
     }
     
     render() {
