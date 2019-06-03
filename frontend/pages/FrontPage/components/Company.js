@@ -5,7 +5,7 @@ import Koji from 'koji-tools';
 import Column from '../../../common/components/Column'
 
 const Company = styled(Column)`
-    padding: 0 8px 8px 8px;
+    padding: 0 .5rem .5rem .5rem;
     display: flex;
     text-align: ${() => Koji.config.layout.alignAddress};
     flex-wrap: wrap;

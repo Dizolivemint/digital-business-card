@@ -20,6 +20,8 @@ const H1Name = styled.h1`
     text-indent: ${() => Koji.config.layout.nameLetterSpacing};
     width: 100%;
     margin: auto;
+    ${() => Koji.config.layout.alignAddress != 'center' && `
+        margin: auto 1rem auto 1rem`};
     text-align: ${() => Koji.config.layout.alignAddress};
 `;
 
@@ -27,12 +29,31 @@ const H2Title = styled.p`
     font-size: calc(10px + 1vmin);
     letter-spacing: ${() => Koji.config.layout.titleLetterSpacing};
     text-indent: ${() => Koji.config.layout.titleLetterSpacing};
-    margin: ${props => props.margin};
+    margin: 0 1rem 1.5rem;
+    ${() => Koji.config.layout.alignAddress === 'right' && `
+        transform: translateX(${Koji.config.layout.titleLetterSpacing})`};
+    ${() => Koji.config.layout.alignAddress != 'right' && `
+        margin-right: 1rem`};
+    ${() => Koji.config.layout.alignAddress === 'left' && `
+        text-indent: 0`};   
+    width: 100%;
 `;
 
 const Content = styled.div`
-  padding-bottom: 8px;
+    padding-bottom: 8px;
 `;
+
+const CompanyLinks = styled.div`
+    width: 100%;
+    margin: 1rem 0.5rem 0 0.5rem;
+    display: flex;
+    justify-content: center
+    ${() => Koji.config.layout.alignAddress === 'right' && `
+        justify-content: flex-end`};
+    ${() => Koji.config.layout.alignAddress === 'left' && `
+        justify-content: left`};
+    flex-wrap: wrap;
+    `;
 
 class FrontPage extends React.Component {
     constructor(props) {
@@ -67,16 +88,16 @@ class FrontPage extends React.Component {
                     </Column>
                     <Column colWidth="100%">
 
-                        <H2Title
-                        margin="0 0 1.5em"
-                        >
+                        <H2Title>
                             {Koji.config.strings.title}
                         </H2Title>  
 
                     </Column>
-                    <Address/>
-                    <Phone/>
-                    <Email/>
+                    <CompanyLinks>
+                        <Address/>
+                        <Phone/>
+                        <Email/>                        
+                    </CompanyLinks>
                     <Social/>
                 </Company>
             </Container>

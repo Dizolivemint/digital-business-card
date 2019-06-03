@@ -7,7 +7,7 @@ import ExtLink from '../../../common/components/ExtLink'
 import Column from '../../../common/components/Column'
 
 const CompanyName = styled.p`
-    margin: 0;
+    margin: .5rem auto;
     font-family: '${() => Font.getFontFamily(Koji.config.layout.companyFontFamily)}', sans-serif;
     font-size: calc(10px + ${() => Koji.config.layout.companyFontSize});
     text-align: center;  

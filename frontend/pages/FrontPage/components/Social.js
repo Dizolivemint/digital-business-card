@@ -15,6 +15,7 @@ const SocialLink = styled.a`
 const Container = styled.div`
     margin: 1em 0;
     font-size: calc(14px + ${() => Koji.config.layout.addressFontSize});
+    width: 100%;
 `
 
 
