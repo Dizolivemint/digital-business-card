@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Koji from 'koji-tools';
 import { TiArrowBackOutline } from "react-icons/ti";
+import { Helmet } from 'react-helmet';
 
 import Flip from '../../common/components/Flip'
 import Container from '../../common/components/Container'
@@ -74,6 +75,11 @@ class FrontPage extends React.Component {
     render() {
         return (
             <Container>
+                <Helmet defaultTitle={Koji.config.strings.name}>
+                    <link href={Koji.config.layout.fontFamily} rel="stylesheet" />
+                    <link href={Koji.config.layout.companyFontFamily} rel="stylesheet" />
+                    <link rel="icon" href={Koji.config.metadata.icon} sizes="32x32" />
+                </Helmet>
                 {(Koji.config.layout.hasBack) && 
                     <Flip to="/back">
                             <TiArrowBackOutline size="24"/>
