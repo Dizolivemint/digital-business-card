@@ -1,0 +1,38 @@
+{
+  "print": {
+  },
+  "@@editor": [
+    {
+      "key": "print",
+      "name": "Print",
+      "icon": "🖨️",
+      "source": "print.json",
+      "fields": [
+        {
+          "key": "printable",
+          "name": "Printable?",
+          "type": "boolean",
+          "description": "Printable QR code version"
+        },
+        {
+          "key": "bgColor",
+          "name": "QR Code | Background color",
+          "type": "text",
+          "description": "QR code background color"
+        },
+        {
+          "key": "width",
+          "name": "QR Code | Width",
+          "type": "text",
+          "description": "QR code width"
+        },
+        {
+          "key": "level",
+          "name": "QR Code | Level",
+          "type": "text",
+          "description": "QR Code level (L, M, Q, or H)"
+        }
+      ]
+    }
+  ]
+}

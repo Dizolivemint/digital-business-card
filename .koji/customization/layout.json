@@ -10,7 +10,10 @@
     "companyFontFamily": "https://fonts.googleapis.com/css?family=Dosis",
     "companyFontSize": "1.2vmin",
     "addressFontSize": "1.25vmin",
-    "hasBack": false
+    "hasBack": false,
+    "showAddress": true,
+    "showPhone": true,
+    "showEmail": true
   },
   "@@editor": [
     {
@@ -76,6 +79,21 @@
         {
           "key": "hasBack",
           "description": "Back side of card?",
+          "type": "boolean"
+        },
+        {
+          "key": "showAddress",
+          "name": "Show address?",
+          "type": "boolean"
+        },
+        {
+          "key": "showPhone",
+          "name": "Show phone?",
+          "type": "boolean"
+        },
+        {
+          "key": "showEmail",
+          "name": "Show email?",
           "type": "boolean"
         }
       ]

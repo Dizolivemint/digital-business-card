@@ -100,9 +100,15 @@ class FrontPage extends React.Component {
 
                     </Column>
                     <CompanyLinks>
-                        <Address/>
-                        <Phone/>
-                        <Email/>                        
+                        {(Koji.config.layout.showAddress) &&
+                            <Address/>
+                        }
+                        {(Koji.config.layout.showPhone) &&
+                            <Phone/>
+                        }
+                        {(Koji.config.layout.showEmail) &&
+                            <Email/>
+                        }                        
                     </CompanyLinks>
                     <Social/>
                 </Company>
