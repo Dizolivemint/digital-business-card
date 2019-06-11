@@ -15,8 +15,6 @@ import Phone from './components/Phone'
 import Email from './components/Email'
 import Social from './components/Social'
 
-import ButtonShare from '../../common/components/ButtonShare'
-
 const H1Name = styled.h1`
     font-size: calc(10px + 4vmin);
     letter-spacing: ${() => Koji.config.layout.nameLetterSpacing};
@@ -114,7 +112,6 @@ class FrontPage extends React.Component {
                     </CompanyLinks>
                     <Social/>
                 </Company>
-                <ButtonShare/>
             </Container>
         );
     }

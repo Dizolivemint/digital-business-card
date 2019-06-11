@@ -6,6 +6,9 @@ import Koji from 'koji-tools';
 // Add new Social icons here from https://react-icons.netlify.com/#/icons/fa
 import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaPinterestP, FaSoundcloud, FaTwitter, FaYoutube } from 'react-icons/fa';
 
+// Share button for mobile device sharing options using Web Share API
+import ButtonShare from '../../../common/components/ButtonShare'
+
 const SocialLink = styled.a`
     color: ${() => Koji.config.colors.socialColor};
     display: inline-block;
@@ -23,7 +26,7 @@ class Social extends Component {
   render() {
     return (
       <Container>
-
+        <ButtonShare/>
         {(Koji.config.social.facebook) &&
           <SocialLink 
           href={Koji.config.social.facebook}
